@@ -1,0 +1,241 @@
+/* 头部 */
+.header{
+  width: 1200px;
+  height:42px;
+  margin: 50px auto;
+}
+/* logo */
+.logo{
+  width: 198px;
+  height: 42px;
+  float: left;
+}
+/* nav */
+.nav{
+  float: left;
+  width: 300px;
+  height: 42px;
+  margin-left: 60px;
+}
+.nav ul li{
+  width: 60px;
+  height: 42px;
+  display: inline;
+  margin: 0 15px;
+}
+.nav ul li a{
+  height: 42px;
+  line-height: 42px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #050505;
+  text-decoration: none;
+}
+.nav ul li a:hover{
+  color: blue;
+  border-bottom:solid;
+}
+/* 搜索框 */
+.search{
+  float: left;
+}
+input{
+  float: left;
+  width: 390px;
+  height: 40px;
+  padding:  0 20px;
+  color: #bfbfbf;
+  border: 1px solid #00a4ff;
+}
+.search button{
+  float: left;
+  width: 40px;
+  height: 42px;
+  background: #00a4ff;
+  color: red;
+  border: 1px solid #00a4ff;
+}
+/* 用户模块 */
+.user{
+  float: right;
+  line-height: 42px;
+  margin-right: 52px;
+  font-size: 16px;
+  color: #666;
+  vertical-align: middle;
+}
+/* benner */
+.benner{
+  height: 421px;
+  background-color: #1c036c;
+}
+/* 设置背景图片 */
+.bennerbackground{
+  width: 1200px;
+  height: 421px;
+  background: url('../images/banner2.png');
+  margin: auto;
+}
+/* 左侧导航 */
+.benner_left{
+  float: left;
+  width: 190px;
+  height: 421px;
+  background: rgba(0, 0, 0, .3);
+}
+.benner_left ul li{
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+}
+.benner_left ul li a{
+  width: 150px;
+  height: 45px;
+  font-size: 14px;
+  color: #fff; 
+}
+.benner_left ul li a span{
+  float: right;
+  text-align:auto;
+}
+.benner_left ul li a:hover{
+ color: #00a4ff;
+}
+/* 右侧我的课程 */
+.benner_right{
+  float: right;
+  width: 230px;
+  height: 300px;
+  margin-top: 50px;
+  background-color: #fff;
+}
+.benner_right h2{
+  height: 48px;
+  background: #9bceea;
+  text-align: center;
+  line-height: 48px;
+  font-size: 18px;
+  color: #fff;
+}
+.benner_right ul{
+  margin: 0 20px;
+}
+.benner_right ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.benner_right ul li h4 {
+  font-size: 16px;
+  color: #4e4e4e;
+}
+.benner_right ul li p {
+  font-size: 12px;
+  color: #a5a5a5;
+}
+.benner_right>a{
+  display: block;
+  height: 38px;
+  border: 1px solid #00a4ff;
+  text-align: center;
+  line-height: 38px;
+  color: #00a4ff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 7px  20px 0 ;
+}
+/* 精品推荐 */
+.good{
+  width: 1200px;
+  height: 60px;
+  margin: 10px auto 0;
+  box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);  /*设置盒子阴影*/
+}
+.good h3{
+  line-height: 60px;
+  float: left;
+  margin-left: 30px;
+  font-size: 16px;
+  color: #00a4ff;
+}
+.good ul{
+  float: left;
+  margin-left: 30px;
+}
+.good ul li{
+  height: 60px;
+  float: left;
+  /* line-height: 60px; */
+}
+.good ul li a {
+  padding: 0 30px;
+  font-size: 16px;
+  border-left: 1px solid #ccc;
+  color: #050505;
+}
+.good>a{
+  line-height: 60px;
+  float: right;
+  margin-right: 30px;
+  font-size: 14px;
+  color: #00a4ff;
+}
+/* 精品课程 */
+.goods{
+  width: 1200px;
+  height: 615px;
+  margin: 30px  auto 0;
+}
+.goods_header{
+  height: 45px; 
+}
+.goods_header h3{
+  float: left;
+  font-size: 20px;
+  color: #494949;
+}
+.goods_header>a{
+  float: right;
+  font-size: 12px;
+  color: #a5a5a5;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+.goods_footer{
+  width: 1225px;
+}
+.goods_footer ul li {
+  float: left;
+  width: 220px;
+  height: 270px;
+  background-color: #fff;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.goods_footer ul li a{
+  position: relative; 
+}
+.goods_footer ul li h4{
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 20px 20px 20px 25px;
+  font-size: 14px;
+  color: #050505;
+  font-weight: 400;
+}
+.goods_footer ul li a span{
+  background-color: rgb(220, 245, 120,0.3);
+  width: 220px;
+  height: 16px;
+  position: absolute;
+  font-size: 12px;
+  color: #999;
+  left: 0;
+  bottom: 79px;
+  color: rgb(254, 218, 218);
+}
+.goods_footer ul>li>a:hover span{
+  color: rgb(245, 65, 65);
+  background-color: rgba(213, 250, 68, 0.8);
+}

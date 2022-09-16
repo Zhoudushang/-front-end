@@ -1,0 +1,34 @@
+/*消除所有模板自带的padding和margin*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.clears{
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+    font-size: 0px;
+    line-height: 0px;
+}
+ul,ol,li{
+    list-style: none;/*让列表前的点点消失*/
+}
+a{
+    text-decoration: none;/*去除a标签的下划线*/
+
+}
+img{
+    border: none
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+input, textarea ,select,button{
+    outline:none;   /*去掉它们的蓝色外框*/
+    vertical-align:middle;   /* 垂直居中 */
+}
+body{
+    font-size: 30px;
+}

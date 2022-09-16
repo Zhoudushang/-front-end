@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像旋转小特效</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* 魔方样式设置部分 */
+        .square{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            margin-bottom: 100px;
+        }
+        ul{
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
+            height: 100%;
+        }
+        li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            border: 1px solid pink;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        
+        /* 图片的子折叠板块，形成可以旋转的魔方 */
+        ul li:nth-child(1) {
+            transform: translateZ(100px);
+        }
+        ul li:nth-child(2) {
+            transform: rotateY(180deg)  translateZ(0) ;
+        }
+        ul li:nth-child(3) {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        ul li:nth-child(4) {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        ul li:nth-child(5) {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        ul li:nth-child(6) {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        
+        /* 用于点击方块的模式 */
+        .img_1{
+            background-image: url(../images/pic.png);
+        }
+        .img_2{
+            background-image: url(../images/pic2.png);
+        }
+        .img_3{
+            background-image: url(../images/pic3.png);
+        }
+        .img_4{
+            background-image: url(../images/pic4.png);
+        }
+        .img_5{
+            background-image: url(../images/pic2.png);
+        }
+        .img_6{
+            background-image: url(../images/pic3.png);
+        }
+        span{
+            display: inline-block;
+            width: 45px;
+            height: 30px;
+            background-size: contain;
+            border: 1px solid white;
+        }
+        .toc{
+            width: 350px;
+            margin: 0 auto;
+        }
+        /* 辅助JS块样式设置 */
+        .square .img_1 {
+            transform: translateZ(-100px);
+        }
+        .square .img_2 {
+            transform: translateZ(-100px) rotateX(-90deg) ;
+        }
+        .square .img_3 {
+            transform:  translateZ(-100px) rotateY(-90deg) ;
+        }
+        .square .img_4 {
+            transform: translateZ(-100px) rotateY(90deg) ;
+        }
+        .square .img_5 {
+            transform: translateZ(-100px) rotateX(-90deg) ;
+        }
+        .square .img_6 {
+            transform: translateZ(-100px) rotateX(90deg) ;
+        }
+    </style>
+</head>
+<body>
+    <!-- 魔方 -->
+    <div class="square">
+        <ul class="s-img">
+            <li><img src="../images/pic.png"></li>
+            <li><img src="../images/pic2.png"></li>
+            <li><img src="../images/pic3.png"></li>
+            <li><img src="../images/pic4.png"></li>
+            <li><img src="../images/pic2.png"></li>
+            <li><img src="../images/pic3.png"></li>
+        </ul>
+    </div>
+    <!-- 手动点击旋转 -->
+    <div class="toc">
+        <span class="img_1"></span>
+        <span class="img_2"></span>
+        <span class="img_3"></span>
+        <span class="img_4"></span>
+        <span class="img_5"></span>
+        <span class="img_6"></span>
+    </div>
+    <!-- JS -->
+    <script src="../JS/xuanzhuan.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.contea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #001d30;
+  animation: changeback 1s linear infinite;
+}
+@keyframes changeback{
+  to{
+    filter: hue-rotate(360deg);
+  }
+}
+.conters{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to top, #001d30 40%, #51eeee);  /*设置渐变*/
+  border-radius: 50%;  /*设置圆角*/
+  animation: xuh 1s linear infinite;   /*动画添加 设置时间等*/
+}
+@keyframes xuh{
+  to{
+    transform: rotateZ(360deg);
+  } 
+}
+
+.conters:before{
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  bottom: 0;
+  /* inset: 20px 20px 0 0; */ /*如果浏览器支持的话可以使用*/
+  background: #001d30;  
+  border-radius: 50%;
+}
+.conters::after{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50px;
+  right: -8px;
+  background: #51eeee; 
+  box-shadow: 0 0 5px #51eeee, 0 0 25px #51eeee,0 0 50px #51eeee ,0 0 75px #51eeee; /*阴影偏移和颜色*/
+}
