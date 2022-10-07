@@ -1,0 +1,151 @@
+:root{
+  --light-color:#fff;
+}
+body{
+  width: 100%;
+  height: 100vh;
+
+}
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.light-container{
+  width: 100%;
+  display: flex;
+  /* 对齐 */
+  justify-content: center;
+  align-items: center;
+  /* 背景颜色 */
+  background: #222;
+  transition: 0.5s;
+}
+/* 灯 */
+.light{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--light-color);
+  transition: 0.5s;
+}
+.light::before{
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 80px;
+  border-radius: 10px;
+  background: var(--light-color);
+  left: 25%;
+  top: -50px;
+  border-top: 30px solid black;
+  transition: 0.5s;
+}
+.light span:nth-child(1){
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  box-shadow: 20px 20px 0 10px var(--light-color);
+  border-bottom-right-radius: 40px;
+  left: -6px;
+  top: -16px;
+  transform: rotate(342deg);
+  transition: 0.5s;
+}
+.light span:nth-child(2){
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  box-shadow: -20px 20px 0 10px var(--light-color);
+  border-bottom-left-radius: 40px;
+  right: -3.1px;
+  top: -16px;
+  transform: rotate(16deg);
+  transition: 0.5s;
+}
+/* 线的样式设计 */
+.wire{
+  width: 4px;
+  height: 400px;
+  background: #8f8e8e;
+  top: -16%;
+  left: 49.5%;
+  position: absolute;
+  transition: 0.5s;
+}
+/* 亮光设计 */
+.light::after{
+  position: absolute;
+  content: "";
+  width: 140px;
+  height: 140px;
+  background: var(--light-color);
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  filter: blur(60px);
+  transform: translate(-21%,-40px);
+  box-shadow: 0 0 10px var(--light-color),
+  0 0 30px var(--light-color),
+  0 0 60px var(--light-color),
+  0 0 120px var(--light-color),
+  0 0 200px var(--light-color),
+  0 0 260px var(--light-color);
+  transition: 0.5s;
+}
+/* 开关  */
+.switch-container{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  background:linear-gradient(#eee,#ccc,#eee);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(#777,#fff,#777);
+  border-radius: 6px;
+  border: 2px solid rgba(81,81,81,0.6);
+  cursor: pointer;
+}
+.switch::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  background: linear-gradient(#c3c3c3,#fff,#c3c3c3);
+  border-radius: 4px;
+  top: 15%;
+  left: 0;
+}
+.switch::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: #d5d5d5;
+  left: 50%;
+  top: 6px;
+  transform: translate(-50%);
+  border-radius: 4px;
+}
+.on .switch::before{
+  top: 0;
+  background: 
+  linear-gradient(#c3c3c3,#c3c3c3,#fff);
+}
+.on .switch::after{
+  top: 6px;
+  background: 
+  linear-gradient(#c3c3c3,#c3c3c3,#fff);
+}

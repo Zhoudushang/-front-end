@@ -1,0 +1,66 @@
+/*消除所有模板自带的padding和margin*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,ol,li{
+    list-style: none;/*让列表前的点点消失*/
+}
+body{
+    /* font-size: 10px; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(to top,#dfe9f3,#fff);
+}
+.container{
+    width: 1240px;
+    border: 1px solid red;
+}
+li{
+    position: relative;
+    width: 400px;
+    height: 260px;
+    float: left;
+    margin: 5px 10px 5px 0;
+    overflow: hidden;
+}
+
+li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: cover;
+    /* 过度效果 */
+    transition: 0.25s ease-in;
+}
+li p{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    position: absolute;
+    left: 0;
+    /* 移出范围 */
+    top: -100%;
+    font-size: 15px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 24px
+}
+li:hover img{
+    /* 鼠标悬停图片变大 */
+    transform: scale(1.1);
+}
+li:nth-child(3){
+    margin-right: 0;
+    width: 400px;
+    height: 530px;
+}
+li:nth-child(4),li:nth-child(5),li:nth-child(7),li:nth-child(8){
+    margin-top: -260px;
+}

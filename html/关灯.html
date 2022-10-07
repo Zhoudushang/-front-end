@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../CSS/css.css">
+  <link rel="stylesheet" href="../CSS/guandeng.css">
+  <title>关灯了</title>
+</head>
+<body>
+  <div class="container">
+    <div class="light-container">
+      <!-- 线 -->
+      <div class="wire"></div>
+      <!-- 灯的主题部分 -->
+      <div class="light">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="switch-container">
+      <div class="switch"></div>
+    </div>
+  </div>
+</body>
+<script src="../Js/jquery.js"></script>
+<script>
+  var switchOn = true;
+  $(".switch").on('click',function(){
+    var body = document.querySelector('body');
+    body.classList.toggle('on');
+    switchOn = !switchOn;
+    if(switchOn){
+      document.documentElement.style.setProperty('--light-color','#fff');
+      $('.light-container').css('background','#5c5c5c');
+      $('.wire').css('background','#8f8e8e');
+    }else{
+      document.documentElement.style.setProperty('--light-color','#000');
+      $('.light-container').css('background','#000');
+      $('.wire').css('background','#000');
+    }
+  })
+</script>
+</html>
